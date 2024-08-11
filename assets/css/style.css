@@ -1,0 +1,409 @@
+:root {
+    --body-color: #191919;
+    --color-cinza: rgb(100, 100, 100);
+    --color-preto: rgb(17, 17, 17);
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #191919;
+    font-family: 'Calibri', 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
+    color: rgb(220, 220, 220);
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0px 50px 0px 50px;
+    margin-top: -5px;
+}
+
+header h1 {
+    margin-bottom: 10px;
+    font-size: 35px;
+    font-weight: lighter;
+    text-transform: uppercase;
+}
+
+header hr {
+    width: 90vw;
+    border-color: rgb(100, 100, 100);
+}
+
+main {
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    width: 90vw;
+    height: 90vh;
+}
+
+.area-anotacoes {
+    background-color: rgb(17, 17, 17);
+    width: 30%;
+    min-width: 400px;
+    height: 98%;
+    border-radius: 5px;
+    margin-right: 5px;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+main hr {
+    height: 95%;
+    margin: 0;
+    border-color: rgb(100, 100, 100);
+}
+
+.save-confirm{
+    position: absolute;
+    margin-left: 1000px;
+    top: -70px;
+    padding: 10px 50px;
+    border-radius: 0px 0px 30px 30px;
+    color: var(--color-preto);
+    background-color: orange;
+    box-shadow: 1px 5px 20px black;
+    transition: all 0.5s;
+}
+
+.save-confirm h2{
+    font-size: 20px;
+    font-weight: bold;
+    margin: 0;
+}
+
+.requisitar-titulo{
+    position: absolute;
+    margin-left: 1000px;
+    top: -70px;
+    padding: 10px 50px;
+    border-radius: 0px 0px 30px 30px;
+    color: var(--color-preto);
+    background-color: orange;
+    box-shadow: 1px 5px 20px black;
+    transition: all 0.5s;
+    text-align: center;
+}
+
+.requisitar-titulo h2{
+    font-size: 20px;
+    font-weight: bold;
+    margin: 0;
+}
+
+.container-del-confirm{
+    z-index: 1;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.3);
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+
+.del-confirm{
+    background-color: var(--color-preto);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 100px;
+    gap: 20px;
+    transition: all 0.5s;
+}
+
+.botoes-de-confirmar{
+    display: flex;
+    gap: 100px;
+}
+
+.botoes-de-confirmar button{
+    width: 200px;
+    padding: 10px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+    color: var(--color-cinza);
+    box-shadow: 1px 3px 10px rgb(0, 0, 0);
+    transition: all 0.2s;
+}
+
+.botoes-de-confirmar button:hover{
+    /*box-shadow: inset 0px 0px 10px;*/
+    background-color: orange;    
+    color: black;
+}
+
+.title-del{
+    color: orange;
+}
+
+/*Area Anotações*/
+.title-area-anotacoes {
+    width: 95%;
+    height: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: default;
+}
+
+.title-area-anotacoes h2 {
+    margin-bottom: 0px;
+    margin-left: 10px;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+.title-area-anotacoes i {
+    margin-bottom: -25px;
+    margin-right: 2px;
+    font-size: 23px;
+    font-weight: lighter;
+    text-transform: uppercase;
+}
+
+.container-anotacoes {
+    margin-top: 10px;
+    width: 100%;
+    height: 90%;
+    flex-direction: column;
+    overflow-y: scroll;
+}
+
+.container-anotacoes::-webkit-scrollbar {
+    width: 15px;
+}
+
+.container-anotacoes::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+
+.container-anotacoes::-webkit-scrollbar-thumb {
+    background-color: #191919;
+    border: 1px solid #303030;
+    border-radius: 5px;
+}
+
+.anotacao {
+    width: 99%;
+    min-height: 100px;
+    border-radius: 20px;
+    padding: 15px;
+    border: 1px solid orange;
+    background-color: rgb(15, 15, 15);
+    box-sizing: border-box;
+    margin-bottom: 30px;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.anotacao h2{
+    margin: 0;
+    margin-top: 3px;
+    margin-bottom: 10px;
+    font-size: 22px;
+    font-weight: lighter;
+}
+
+.anotacao hr {
+    width: 70%;
+    margin-bottom: 10px;
+}
+
+.anotacao span {
+    font-size: 15px;
+    width: 300px;
+    display: block;
+    overflow: hidden;
+    color: rgb(100, 100, 100);
+}
+
+/*FIM Area Anotações*/
+
+/*Botao de adicionar*/
+.botao-adicionar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: orange;
+    position: absolute;
+    bottom: 25px;
+    right: 25px;
+    display: flex;
+    font-size: 25px;
+    justify-content: center;
+    align-items: center;
+    color: var(--color-preto);
+    cursor: pointer;
+}
+
+/*FIM botao de adicionar*/
+
+/*Area de Edição*/
+
+.container-edicao {
+    width: 90%;
+    height: 95%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.area-edicao {
+    background-color: rgb(17, 17, 17);
+    width: 70%;
+    height: 98%;
+    margin-left: 5px;
+    border-radius: 5px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container-titulo-da-anotacao {
+    width: 100%;
+    height: 60px;
+    margin-top: 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.container-corpo-da-anotacao {
+    width: 100%;
+    height: 80%;
+}
+
+#titulo-da-anotacao {
+    height: 50px;
+    margin-left: 10px;
+    background-color: transparent;
+    border: none;
+    font-size: 25px;
+    font-weight: lighter;
+    color: white;
+}
+
+#titulo-da-anotacao::placeholder {
+    color: hsla(0, 0%, 19%, 0.9);
+    font-weight: bold;
+}
+
+#titulo-da-anotacao:focus {
+    outline: none;
+}
+
+.container-buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+    width: 200px;
+    height: 90%;
+    padding: 0px 20px;
+    font-size: 1px;
+}
+
+.container-buttons button {
+    width: 100px;
+    height: 60%;
+    cursor: pointer;
+    border-radius: 10px;
+    border: none;
+    font-size: 12px;
+    font-weight: 900;
+    text-transform: uppercase;
+    transition: all 0.3s;
+    color: var(--color-cinza);
+    border: 1px solid var(--color-cinza);
+}
+
+.container-buttons button:hover {
+    box-shadow: inset 0px 0px 5px var(--color-cinza);
+}
+
+.del-button {
+    background-color: transparent;
+}
+
+.save-button {
+    background-color: transparent;
+}
+
+#corpo-da-anotacao {
+    background-color: transparent;
+    color: white;
+    width: 99.5%;
+    height: 100%;
+    resize: none;
+    border: none;
+    font-size: 24px;
+    font-weight: lighter;
+    line-height: 2em; /* Ajuste a altura da linha conforme necessário */
+    background-image: linear-gradient(to bottom, var(--color-cinza) 1px, transparent 1px);
+    background-size: 100% 2em; /* Ajuste o espaçamento entre as linhas conforme necessário */
+}
+
+#corpo-da-anotacao:focus{
+    outline: none;
+}
+
+#corpo-da-anotacao::-webkit-scrollbar {
+    width: 15px;
+}
+
+#corpo-da-anotacao::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+
+#corpo-da-anotacao::-webkit-scrollbar-thumb {
+    background-color: #191919;
+    border: 1px solid #303030;
+    border-radius: 5px;
+}
+
+/*FIM Area de Edição*/
+
+@media(max-width: 1440px){
+    .requisitar-titulo{
+        margin-left: 850px;
+        top: -90px;
+        width: 300px;
+    }
+}
+
+@media(max-width: 1024px){
+    .requisitar-titulo{
+        margin-left: 0px;
+        top: -90px;
+        width: 300px;
+    }
+
+    .save-confirm{
+        margin-left:0px;
+        top: -70px;
+    }
+
+    .container-edicao{
+
+    }
+
+    main{
+        margin: 0px 4px;
+    }
+
+    .area-anotacoes{
+
+    }
+}

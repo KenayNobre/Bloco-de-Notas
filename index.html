@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bloco de Notas</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script src="https://kit.fontawesome.com/04a1096a36.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="container-del-confirm">
+        <div class="del-confirm">
+            <h2>Tem certeza de que deseja excluir esta anotação ("<span class="title-del"></span>")? Esta ação não pode ser desfeita.</h2>
+            <div class="botoes-de-confirmar">
+                <button class="del-cancelar">Cancelar</button>
+                <button class="del-confirmar">Sim, tenho certeza</button>
+            </div>
+        </div>
+    </div>
+    <header>
+        <h1>
+            Bloco de Notas
+        </h1>
+        <!-- Save confirm -->
+        <div class="save-confirm">
+            <h2>Salvo com sucesso.</h2>
+        </div>
+        <!-- Fim Save confirm -->
+
+        <!-- Requisitar titulo -->
+        <div class="requisitar-titulo">
+            <h2>O título é obrigatório. Por favor, adicione um título à sua anotação.</h2>
+        </div>
+        <!-- Requisitar titulo -->
+        <hr>
+    </header>
+    <main>
+        <section class="area-anotacoes">
+            <div class="title-area-anotacoes">
+                <h2>
+                    Anotações
+                </h2>
+                <i class="fa-solid fa-note-sticky"></i>
+            </div>
+            <div class="container-anotacoes">
+                <!-- <div class="anotacao">
+                    <h2 class="title-anotacao">Treino de peito</h2>
+                    <hr>
+                    <span class="span-anotacao">06/08/2024</span>
+                </div> -->
+            </div>
+        </section>
+        <hr>
+        <section class="area-edicao">
+            <div class="container-edicao">
+                <div class="container-titulo-da-anotacao">
+                    <input type="text" name="titulo-da-anotacao" id="titulo-da-anotacao" placeholder="Título"
+                        autocomplete="off" maxlength="30">
+                    <div class="container-buttons">
+                        <button class="del-button">deletar</button>
+                        <button class="save-button">salvar</button>
+                    </div>
+                </div>
+                <div class="container-corpo-da-anotacao">
+                    <textarea name="corpo-da-anotacao" id="corpo-da-anotacao"></textarea>
+                </div>
+            </div>
+
+            <!--botao de adicionar-->
+            <div class="botao-adicionar">
+                <i class="fa-solid fa-plus"></i>
+            </div>
+            <!-- FIM botao de adicionar-->
+        </section>
+    </main>
+
+
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>
