@@ -6,3 +6,6 @@ Pojeto realizado com o intuito de treinar os conhecimentos de JavaScript e o uso
 - **Carregar Anotações**: Carrega todas as anotações salvas no `localStorage` ao iniciar a aplicação.
 - **Deletar Anotação**: Remove uma anotação específica do `localStorage` e do DOM.
 - **Mostrar Anotação**: Exibe o título e o corpo de uma anotação selecionada.
+
+## Acesse Aqui
+https://kenaynobre.github.io/Bloco-de-Notas/
